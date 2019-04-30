@@ -5,12 +5,22 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react-scripts": "3.0.0",
+    "typescript": "^3.4.5"
   },
+  "homepage": "./",
+  "main": "public/electron.js",
   "scripts": {
     "start": "react-scripts start",
+    "react-start": "react-scripts start",
+    "estart": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "electron": "electron .",
+    "electron-start": "node src/electron-wait-react",
+    "pack": "build --dir",
+    "dist": "npm run build && build",
+    "postinstall": "install-app-deps",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^5.0.0",
+    "electron-builder": "^20.39.0"
   }
 }
